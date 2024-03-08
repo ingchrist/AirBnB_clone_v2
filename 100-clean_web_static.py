@@ -7,16 +7,16 @@ env.hosts = ['44.210.150.159', '35.173.47.15']
 env.user = "ubuntu"
 
 
-def wzqdo_clean(wzqnumber=0):
+def do_clean(number=0):
     """ CLEANS """
 
-    wzqnumber = int(wzqnumber)
+    number = int(number)
 
-    if wzqnumber == 0:
-        wzqnumber = 2
+    if number == 0:
+        number = 2
     else:
-        wzqnumber += 1
+        number += 1
 
-    local('cd versions ; ls -t | tail -n +{} | xargs rm -rf'.format(wzqnumber))
+    local('cd versions ; ls -t | tail -n +{} | xargs rm -rf'.format(number))
     path = '/data/web_static/releases'
-    run('cd {} ; ls -t | tail -n +{} | xargs rm -rf'.format(path, wzqnumber))
+    run('cd {} ; ls -t | tail -n +{} | xargs rm -rf'.format(path, number))

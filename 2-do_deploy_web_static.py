@@ -11,7 +11,7 @@ env.hosts = ["44.210.150.159", "35.173.47.15"]
 env.user = "ubuntu"
 
 
-def wzqdo_pack():
+def do_pack():
     """
         return the archive path if archive has generated correctly.
     """
@@ -27,7 +27,7 @@ def wzqdo_pack():
         return None
 
 
-def wzqdo_deploy(archive_path):
+def do_deploy(archive_path):
     """
         Distribute archive.
     """
@@ -48,6 +48,5 @@ def wzqdo_deploy(archive_path):
 
         print("New version deployed!")
         return True
-return False
 
-
+    return False

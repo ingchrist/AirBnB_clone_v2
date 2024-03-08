@@ -4,7 +4,7 @@ from fabric.api import local
 import time
 
 
-def wzqdo_pack():
+def do_pack():
     """Generate an tgz archive from web_static folder"""
     try:
         local("mkdir -p versions")
